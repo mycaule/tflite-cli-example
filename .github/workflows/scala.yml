@@ -22,3 +22,6 @@ jobs:
         export PATH="$PATH:/home/runner/work/tflite-cli-example/tflite-cli-example/graalvm-ce-java8-20.0.0/bin"
         gu install native-image
         sbt graalvm-native-image:packageBin
+     
+    - name: Test the command
+      run: ./target/graalvm-native-image/picocli-scala-example
